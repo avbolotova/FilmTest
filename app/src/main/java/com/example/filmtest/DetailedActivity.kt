@@ -3,7 +3,6 @@ package com.example.filmtest
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.SyncStateContract
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
@@ -21,13 +20,13 @@ class DetailedActivity : AppCompatActivity() {
         val films = intent.getSerializableExtra(
             Companion.TITLE_KEY)
         if (films != null && films is Films) {
-            val imageView: ImageView = findViewById(R.id.detailedActivity)
-            val textView: TextView = findViewById(R.id.detailedActivityTv)
-            val textView2: TextView = findViewById(R.id.detailedActivityDes)
+            val poster: ImageView = findViewById(R.id.detailedActivity)
+            val nameFilm: TextView = findViewById(R.id.detailedActivityTv)
+            val descripton: TextView = findViewById(R.id.detailedActivityDes)
 
-            imageView.setImageResource(films.image)
-            textView.text = films.name
-            textView2.text = films.description
+            poster.setImageResource(films.image)
+            nameFilm.text = films.name
+            descripton.text = films.description
 
         }
 

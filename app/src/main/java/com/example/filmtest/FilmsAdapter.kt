@@ -17,7 +17,7 @@ class FilmsAdapter(private val filmList: ArrayList<Films>)
 
     class FilmViewHolder(itemView : View) :RecyclerView.ViewHolder(itemView){
         val imageView : ImageView = itemView.findViewById(R.id.imageView)
-        val textView : TextView = itemView.findViewById(R.id.textView)
+        val textView : TextView = itemView.findViewById(R.id.descriptionTV)
         val buttonDes : Button = itemView.findViewById(R.id.buttonDes)
 
 
