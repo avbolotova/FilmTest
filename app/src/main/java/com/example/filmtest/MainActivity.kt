@@ -24,6 +24,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        
+
 
 
 
@@ -78,11 +80,8 @@ class MainActivity : AppCompatActivity() {
         )
 
 
-
         filmsAdapter = FilmsAdapter(filmList).apply {
-
             onItemClick = ::onClickOne
-
         }
         recyclerView.adapter = filmsAdapter
 
