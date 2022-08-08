@@ -5,11 +5,13 @@ import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.view.inputmethod.InputBinding
 import android.widget.Button
 import android.widget.TextView
 import androidx.core.app.ActivityCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.filmtest.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,7 +24,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
 
 
         recyclerView = findViewById(R.id.recyclerView)
@@ -78,13 +79,9 @@ class MainActivity : AppCompatActivity() {
 
 
         filmsAdapter = FilmsAdapter(filmList).apply {
-
             onItemClick = ::onClickOne
-
         }
         recyclerView.adapter = filmsAdapter
-
-
 
 
     }
@@ -95,6 +92,12 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
+    private fun onChangeText(films: Films) {
+        apply {
+            val button: Button = findViewById(R.id.buttonDes)
+            button.setTextColor(Color.parseColor("#0000ff"))
+        }
+    }
 }
 
 
