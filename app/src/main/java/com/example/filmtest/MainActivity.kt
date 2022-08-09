@@ -7,8 +7,10 @@ import android.os.Bundle
 import android.view.View
 import android.view.inputmethod.InputBinding
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.filmtest.databinding.ActivityMainBinding
@@ -24,6 +26,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
 
 
         recyclerView = findViewById(R.id.recyclerView)
@@ -92,11 +95,10 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    private fun onChangeText(films: Films) {
-        apply {
-            val button: Button = findViewById(R.id.buttonDes)
-            button.setTextColor(Color.parseColor("#0000ff"))
-        }
+
+    inner class ViewHolder(item: View) : RecyclerView.ViewHolder(item) {
+        var itemImage: ImageView = item.findViewById(R.id.imageView)
+        var itemTitle: TextView = item.findViewById(R.id.descriptionTV)
     }
 }
 

@@ -1,5 +1,6 @@
 package com.example.filmtest
 
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -34,8 +35,10 @@ class FilmsAdapter(private val filmList: ArrayList<Films>)
         holder.textView.text = films.name
         holder.buttonDes.setOnClickListener {
             onItemClick?.invoke(filmList[position])
+            onItemClick?.apply {
+                holder.textView.setTextColor(Color.parseColor("#0000ff"))
+            }
         }
-
 
 
     }
