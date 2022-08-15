@@ -17,14 +17,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
+
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_menu"
+        android:id="@+id/bottomNav"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:backgroundTint="#3F51B5"
-        app:itemHorizontalTranslationEnabled="false"
         app:itemIconTint="@drawable/bottom_selector"
-        app:itemTextColor="@color/white"
+        app:itemTextColor="@drawable/bottom_selector"
+        app:backgroundTint="@color/bottom_nav_item"
+        app:itemHorizontalTranslationEnabled="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

@@ -7,8 +7,10 @@ import android.provider.SyncStateContract
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class DetailedActivity : AppCompatActivity() {
+
 
     companion object {
         const val TITLE_KEY = "TITLE_KEY"
@@ -32,6 +34,7 @@ class DetailedActivity : AppCompatActivity() {
         }
 
 
+
         var button: Button = findViewById(R.id.toShareBut)
         button.setOnClickListener {
             val intent = Intent(Intent.ACTION_SEND)
@@ -40,7 +43,9 @@ class DetailedActivity : AppCompatActivity() {
             startActivity(chooser)
 
 
-
         }
+
     }
+
+
 }

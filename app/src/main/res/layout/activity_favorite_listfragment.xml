@@ -7,7 +7,7 @@
     android:id="@+id/fragmentFavoriteMoviesList">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/favorite_fl"
+        android:id="@+id/favorite_rc"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tool:listitem="@layout/card_movie" />
