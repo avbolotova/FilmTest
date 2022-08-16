@@ -11,6 +11,8 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class DetailedActivity : AppCompatActivity() {
 
+    private lateinit var bottomNavigation: BottomNavigationView
+
 
     companion object {
         const val TITLE_KEY = "TITLE_KEY"
@@ -19,6 +21,21 @@ class DetailedActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detailed)
+
+
+        bottomNavigation = findViewById(R.id.bottomNav)
+
+        bottomNavigation.setOnItemSelectedListener {
+            when (it.itemId) {
+                R.id.home -> onStart()
+                R.id.favorite -> onClickBottomMenu()
+                else -> {
+                }
+            }
+            return@setOnItemSelectedListener true
+        }
+
+
 
         val films = intent.getSerializableExtra(
             Companion.TITLE_KEY)
@@ -47,5 +64,10 @@ class DetailedActivity : AppCompatActivity() {
 
     }
 
+    private fun onClickBottomMenu() {
+        val intent = Intent(this, FavoriteActivity::class.java)
+        intent.putExtra(FavoriteActivity.FAVORITE_KEY)
+        startActivity(intent)
+    }
 
 }

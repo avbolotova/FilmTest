@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.HorizontalScrollView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
@@ -25,6 +26,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var filmList: ArrayList<Films>
     private lateinit var filmsAdapter: FilmsAdapter
     private lateinit var bottomNavigation: BottomNavigationView
+
 
 
 
