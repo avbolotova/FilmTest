@@ -11,7 +11,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class DetailedActivity : AppCompatActivity() {
 
-    private lateinit var bottomNavigation: BottomNavigationView
+//    private lateinit var bottomNavigation: BottomNavigationView
 
 
     companion object {
@@ -23,18 +23,17 @@ class DetailedActivity : AppCompatActivity() {
         setContentView(R.layout.activity_detailed)
 
 
-        bottomNavigation = findViewById(R.id.bottomNav)
-
-        bottomNavigation.setOnItemSelectedListener {
-            when (it.itemId) {
-                R.id.home -> onStart()
-                R.id.favorite -> onClickBottomMenu()
-                else -> {
-                }
-            }
-            return@setOnItemSelectedListener true
-        }
-
+//        bottomNavigation = findViewById(R.id.bottomNav)
+//
+//        bottomNavigation.setOnItemSelectedListener {
+//            when (it.itemId) {
+//                R.id.home -> onStart()
+//                R.id.favorite -> onClickBottomMenu()
+//                else -> {
+//                }
+//            }
+//            return@setOnItemSelectedListener true
+//        }
 
 
         val films = intent.getSerializableExtra(
@@ -51,7 +50,6 @@ class DetailedActivity : AppCompatActivity() {
         }
 
 
-
         var button: Button = findViewById(R.id.toShareBut)
         button.setOnClickListener {
             val intent = Intent(Intent.ACTION_SEND)
@@ -63,11 +61,12 @@ class DetailedActivity : AppCompatActivity() {
         }
 
     }
-
-    private fun onClickBottomMenu() {
-        val intent = Intent(this, FavoriteActivity::class.java)
-        intent.putExtra(FavoriteActivity.FAVORITE_KEY)
-        startActivity(intent)
-    }
-
 }
+
+//    private fun onClickBottomMenu() {
+//        val intent = Intent(this, FavoriteActivity::class.java)
+//        intent.putExtra(FavoriteActivity.FAVORITE_KEY)
+//        startActivity(intent)
+//    }
+//
+//}

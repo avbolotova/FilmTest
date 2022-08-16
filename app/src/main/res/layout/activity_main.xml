@@ -27,7 +27,6 @@
         app:itemIconTint="@drawable/bottom_selector"
         app:itemTextColor="@drawable/bottom_selector"
         app:backgroundTint="@color/bottom_nav_item"
-        app:itemHorizontalTranslationEnabled="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

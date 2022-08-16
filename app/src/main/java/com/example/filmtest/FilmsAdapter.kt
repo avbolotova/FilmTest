@@ -36,10 +36,9 @@ class FilmsAdapter(private val filmList: ArrayList<Films>)
         holder.buttonDes.setOnClickListener {
             onItemClick?.invoke(filmList[position])
             onItemClick?.apply {
-                holder.textView.setTextColor(Color.parseColor("#0000ff"))
+                holder.textView.setTextColor(Color.parseColor("#FF000000"))
             }
         }
-
 
 
     }
