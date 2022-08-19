@@ -9,31 +9,56 @@
     app:cardCornerRadius="1dp"
     app:cardElevation="2dp">
 
-
-
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent" >
+
 
         <ImageView
-            android:id="@+id/card_image"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginTop="12dp"
-            android:layout_weight="1.0" />
+            android:id="@+id/detailedActivityFav"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:src="@drawable/interstellar"
+            tool:ignore="MissingConstraints"
+            tool:layout_editor_absoluteX="-3dp"
+            tool:layout_editor_absoluteY="0dp" />
 
         <TextView
-            android:id="@+id/card_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
-            android:textAlignment="center"
+            android:id="@+id/nameFav"
+            android:layout_width="211dp"
+            android:layout_height="34dp"
+            android:text="Название фильма"
+            android:textSize="15sp"
             android:textStyle="bold"
-            tool:text="Название фильма" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.529"
+            app:layout_constraintStart_toEndOf="@+id/detailedActivityFav"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.096">
 
+        </TextView>
 
+        <CheckBox
+            android:id="@+id/removeFavorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/bottom_nav_item"
+            android:button="@drawable/selector_favorite"
+            android:textColor="#7A7A7A"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.484"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.894"
+            tool:ignore="MissingConstraints">
 
-    </LinearLayout>
+        </CheckBox>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </com.google.android.material.card.MaterialCardView>

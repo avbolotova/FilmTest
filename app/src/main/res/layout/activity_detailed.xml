@@ -33,6 +33,7 @@
             </ImageView>
 
             <CheckBox
+                android:id="@+id/addFavorite"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Добавить в избранное"
