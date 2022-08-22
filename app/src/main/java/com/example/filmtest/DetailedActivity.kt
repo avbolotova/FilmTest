@@ -30,7 +30,7 @@ class DetailedActivity : AppCompatActivity() {
 
         bottomNavigation.setOnItemSelectedListener {
             when (it.itemId) {
-                R.id.home -> onStart()
+                R.id.home -> onClickHome()
                 R.id.favorite -> onClickBottomMenu()
                 else -> {
                 }
@@ -72,6 +72,12 @@ class DetailedActivity : AppCompatActivity() {
     private fun onClickBottomMenu() {
         val intent = Intent(this, FavoriteActivity::class.java)
         intent.putExtra(FavoriteActivity.FAVORITE_KEY)
+        startActivity(intent)
+    }
+
+    private fun onClickHome(){
+        val intent = Intent(this, MainActivity::class.java)
+        intent.putExtra(MainActivity.HOME_OPEN)
         startActivity(intent)
     }
 

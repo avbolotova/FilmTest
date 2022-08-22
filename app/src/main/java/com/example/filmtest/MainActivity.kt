@@ -22,6 +22,10 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
 
+    companion object {
+        const val HOME_OPEN = "HOME_OPEN"
+    }
+
     private lateinit var recyclerView: RecyclerView
     private lateinit var filmList: ArrayList<Films>
     private lateinit var filmsAdapter: FilmsAdapter
@@ -37,7 +41,7 @@ class MainActivity : AppCompatActivity() {
 
         bottomNavigation.setOnItemSelectedListener {
             when (it.itemId) {
-                R.id.home -> onStart()
+                R.id.home -> onClickHome()
                 R.id.favorite -> onClickBottomMenu()
                 else -> {
                 }
@@ -109,6 +113,12 @@ class MainActivity : AppCompatActivity() {
     fun onClickOne(films: Films) {
         val intent = Intent(this, DetailedActivity::class.java)
         intent.putExtra(DetailedActivity.TITLE_KEY, films)
+        startActivity(intent)
+    }
+
+    private fun onClickHome(){
+        val intent = Intent(this, MainActivity::class.java)
+        intent.putExtra(MainActivity.HOME_OPEN)
         startActivity(intent)
     }
 
