@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Program Files (x86)/AndroidStudioProject/FilmTest/app/src/main/res/layout-land/each_item.xml" value="0.22" />
+        <entry key="..\:/Program Files (x86)/AndroidStudioProject/FilmTest/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Program Files (x86)/AndroidStudioProject/FilmTest/app/src/main/res/layout/card_movie.xml" value="0.36666666666666664" />
+        <entry key="..\:/Program Files (x86)/AndroidStudioProject/FilmTest/app/src/main/res/layout/each_item.xml" value="0.22" />
         <entry key="..\:/Users/alena/AndroidStudioProjects/FilmTest/app/src/main/res/drawable/bottom_selector.xml" value="0.2515" />
         <entry key="..\:/Users/alena/AndroidStudioProjects/FilmTest/app/src/main/res/drawable/ic_favorite.xml" value="0.2515" />
         <entry key="..\:/Users/alena/AndroidStudioProjects/FilmTest/app/src/main/res/drawable/ic_favorite_fool_roz.xml" value="0.2175" />

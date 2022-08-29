@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.filmtest.R
 import com.example.filmtest.main.Films
@@ -39,11 +40,11 @@ class FavoriteAdapter(private var films: List<Films>) :
 
     class FavoriteFilmsViewHolder (item: View) : RecyclerView.ViewHolder(item){
         fun bind(film: Films) {
-            val image = itemView.findViewById<ImageView>(R.id.imageView)
-            val buttonDetailed = itemView.findViewById<Button>(R.id.buttonDes)
+            val image = itemView.findViewById<ImageView>(R.id.FavActImage)
+            val titleName = itemView.findViewById<TextView>(R.id.FavName)
 
             image.setImageResource(film.imageResId)
-            buttonDetailed.apply {
+            titleName.apply {
                 text = film.title
             }
         }

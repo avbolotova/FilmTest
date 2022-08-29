@@ -10,6 +10,7 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
 import com.example.filmtest.R
+import com.example.filmtest.favorite.FavoriteActivity
 import com.example.filmtest.observable.FilmsObserver
 import com.example.filmtest.repo.FilmsRepo
 

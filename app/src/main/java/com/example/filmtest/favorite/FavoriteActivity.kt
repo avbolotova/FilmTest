@@ -11,7 +11,7 @@ import com.example.filmtest.repo.FilmsRepo
 
 class FavoriteActivity: AppCompatActivity() {
 
-    private lateinit var adapter: FilmsAdapter
+    private lateinit var adapter: FavoriteAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

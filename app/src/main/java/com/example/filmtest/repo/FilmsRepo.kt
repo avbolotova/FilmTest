@@ -68,8 +68,7 @@ object FilmsRepo : FilmsObservable() {
     }
 
     fun getFavoriteFilms(): List<Films> {
-        val favoriteFilms = films.filter { flms -> flms.isFavorite }
-        return favoriteFilms
+        return films.filter { flms -> flms.isFavorite }
     }
 
     fun deleteFromFavorites(flms: Films) {
