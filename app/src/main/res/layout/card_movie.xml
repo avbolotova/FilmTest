@@ -15,7 +15,7 @@
 
 
         <ImageView
-            android:id="@+id/detailedActivityFav"
+            android:id="@+id/FavActImage"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_gravity="left"
@@ -25,7 +25,7 @@
             tool:layout_editor_absoluteY="0dp" />
 
         <TextView
-            android:id="@+id/nameFav"
+            android:id="@+id/FavName"
             android:layout_width="211dp"
             android:layout_height="34dp"
             android:text="Название фильма"
@@ -34,29 +34,12 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.529"
-            app:layout_constraintStart_toEndOf="@+id/detailedActivityFav"
+            app:layout_constraintStart_toEndOf="@+id/FavActImage"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.096">
 
         </TextView>
 
-        <CheckBox
-            android:id="@+id/removeFavorite"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/bottom_nav_item"
-            android:button="@drawable/selector_favorite"
-            android:textColor="#7A7A7A"
-            android:textStyle="italic"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.484"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.894"
-            tool:ignore="MissingConstraints">
-
-        </CheckBox>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
