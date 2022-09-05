@@ -6,6 +6,22 @@
     android:layout_height="match_parent"
     tools:context=".main.MainActivity">
 
+    <FrameLayout
+        android:id="@+id/fragmentDet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="vertical" />
+
+    <FrameLayout
+        android:id="@+id/fragmentFav"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="vertical" />
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
@@ -18,6 +34,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonAddFavorite"
         android:layout_width="match_parent"
@@ -29,22 +46,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-
-
-<!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
-<!--        android:id="@+id/bottomNav"-->
-<!--        android:layout_width="0dp"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        app:itemIconTint="@drawable/bottom_selector"-->
-<!--        app:itemTextColor="@drawable/bottom_selector"-->
-<!--        app:backgroundTint="@color/bottom_nav_item"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.0"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:menu="@menu/bottom_menu" />-->
 
 

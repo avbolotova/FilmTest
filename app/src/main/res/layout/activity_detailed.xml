@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".main.DetailedActivity">
+    tools:context=".fragment.DetailsFragment">
+
 
     <ScrollView
         android:id="@+id/scrollView2"
@@ -84,27 +85,13 @@
             </TextView>
 
 
+
         </LinearLayout>
+
 
 
     </ScrollView>
 
-<!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
-<!--        android:id="@+id/bottomNav"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        app:backgroundTint="@color/bottom_nav_item"-->
-<!--        app:itemHorizontalTranslationEnabled="false"-->
-<!--        app:itemIconTint="@drawable/bottom_selector"-->
-<!--        app:itemTextColor="@drawable/bottom_selector"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.5"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:menu="@menu/bottom_menu"-->
-<!--        tools:ignore="MissingConstraints">-->
-
-<!--    </com.google.android.material.bottomnavigation.BottomNavigationView>-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -14,7 +14,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 class DetailedActivity : AppCompatActivity() {
 
 
-//    private lateinit var bottomNavigation: BottomNavigationView
+    //    private lateinit var bottomNavigation: BottomNavigationView
     private lateinit var adapter: FavoriteAdapter
 
 

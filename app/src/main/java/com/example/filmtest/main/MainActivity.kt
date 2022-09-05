@@ -16,7 +16,7 @@ import com.example.filmtest.repo.FilmsRepo
 
 class MainActivity : AppCompatActivity(), FilmsObserver {
 
-//    companion object {
+    //    companion object {
 //        const val HOME_OPEN = "HOME_OPEN"
 //    }
 //    private lateinit var bottomNavigation: BottomNavigationView
