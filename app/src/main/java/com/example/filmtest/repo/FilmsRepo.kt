@@ -50,7 +50,7 @@ object FilmsRepo : FilmsObservable() {
                 isFavorite = false
             ),
             Films(
-                title = "Один плюс Один",
+                title = "1 + 1",
                 description = context.getString(R.string.descriptionSix),
                 imageResId = R.drawable.onetoone,
                 isFavorite = false

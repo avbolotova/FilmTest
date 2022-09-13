@@ -14,7 +14,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 class DetailedActivity : AppCompatActivity() {
 
 
-    //    private lateinit var bottomNavigation: BottomNavigationView
     private lateinit var adapter: FavoriteAdapter
 
 
@@ -45,18 +44,6 @@ class DetailedActivity : AppCompatActivity() {
         setResult(RESULT_OK, result)
 
 
-//        bottomNavigation = findViewById(R.id.bottomNav)
-//
-//        bottomNavigation.setOnItemSelectedListener {
-//            when (it.itemId) {
-//                R.id.home -> onClickHome()
-//                R.id.favorite -> onClickBottomMenu()
-//                else -> {
-//                }
-//            }
-//            return@setOnItemSelectedListener true
-//        }
-
 
         var button: Button = findViewById(R.id.toShareBut)
         button.setOnClickListener {
@@ -68,20 +55,6 @@ class DetailedActivity : AppCompatActivity() {
         }
     }
 
-
-//    private fun onClickBottomMenu() {
-//        val intent = Intent(this, FavoriteActivity::class.java)
-//        intent.putExtra(FavoriteActivity.FAVORITE_KEY)
-//        startActivity(intent)
-//    }
-//
-//    private fun onClickHome() {
-//        val intent = Intent(this, MainActivity::class.java)
-//        intent.putExtra(MainActivity.HOME_OPEN)
-//        startActivity(intent)
-//    }
-//    private fun Intent.putExtra(favoriteKey: String) {
-//    }
 }
 
 

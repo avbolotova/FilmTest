@@ -3,7 +3,6 @@ package com.example.filmtest.favorite
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -33,6 +32,7 @@ class FavoriteAdapter(private var films: List<Films>) :
     fun refreshFilms(films: List<Films>) {
         this.films = films
         notifyDataSetChanged()
+
     }
 
     fun getItem(position: Int) : Films = films[position]

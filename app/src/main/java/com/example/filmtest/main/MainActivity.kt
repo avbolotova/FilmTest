@@ -3,6 +3,7 @@ package com.example.filmtest.main
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Gravity
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.widget.AppCompatButton
@@ -10,45 +11,61 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
 import com.example.filmtest.R
-import com.example.filmtest.favorite.FavoriteActivity
+import com.example.filmtest.databinding.ActivityMainBinding
+import com.example.filmtest.fragments.Favorite_fragment
 import com.example.filmtest.observable.FilmsObserver
 import com.example.filmtest.repo.FilmsRepo
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity(), FilmsObserver {
 
-    //    companion object {
-//        const val HOME_OPEN = "HOME_OPEN"
-//    }
-//    private lateinit var bottomNavigation: BottomNavigationView
+
     private lateinit var adapter: FilmsAdapter
+    private lateinit var binding: ActivityMainBinding
+    private lateinit var bottomNavigationView: BottomNavigationView
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        bottomNavigationView = findViewById(R.id.bottomMenu)
+
+        bottomNavigationView.setOnItemSelectedListener {
+            when (it.itemId) {
+                R.id.home -> onOpenActivity()
+                R.id.favorite -> supportFragmentManager.beginTransaction()
+                    .replace(R.id.fragmentContainerView, Favorite_fragment())
+                    .commit()
+                else -> {
+                }
+            }
+            return@setOnItemSelectedListener true
+        }
+
         FilmsRepo.createFilms(applicationContext)
         FilmsRepo.addObserver(this)
-        setOnShowFavoritesButtonClickListener()
         initRecyclerView()
+    }
 
-
-
-//        bottomNavigation = findViewById(R.id.bottomNav)
-//
-//        bottomNavigation.setOnItemSelectedListener {
-//            when (it.itemId) {
-//                R.id.home -> onClickHome()
-//                else -> {
-//                }
-//            }
-//            return@setOnItemSelectedListener true
-//        }
-
+    private fun onOpenActivity() {
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
     }
 
 
     override fun onFilmsChanged(films: List<Films>) {
         adapter.refreshFilms(films.toMutableList())
+
+    }
+
+    private fun onShowToast(){
+        val buttonToast: AppCompatButton = findViewById(R.id.favoriteFilms)
+        buttonToast.setOnClickListener{
+            Toast.makeText(applicationContext, "Вы добавили в избранное", Toast.LENGTH_SHORT).show()
+        }
+
     }
 
 
@@ -87,24 +104,6 @@ class MainActivity : AppCompatActivity(), FilmsObserver {
         startActivityForResult(intent, 42)
     }
 
-    private fun setOnShowFavoritesButtonClickListener() {
-        val button = findViewById<AppCompatButton>(R.id.buttonAddFavorite)
-        button.setOnClickListener {
-            val intent = Intent(this, FavoriteActivity::class.java)
-            startActivity(intent)
-        }
-    }
-
-
-//    private fun onClickHome() {
-//        val intent = Intent(this, MainActivity::class.java)
-//        intent.putExtra(HOME_OPEN)
-//        startActivity(intent)
-//    }
-
-
-//    private fun Intent.putExtra(favoriteKey: String) {
-//    }
 
 
     override fun onBackPressed() {
@@ -118,13 +117,12 @@ class MainActivity : AppCompatActivity(), FilmsObserver {
 
             setNegativeButton("Нет") { _, _ ->
                 // if user press no, then return the activity
-                Toast.makeText(this@MainActivity, "Thank you",
-                    Toast.LENGTH_LONG).show()
             }
             setCancelable(true)
         }.create().show()
     }
 }
+
 
 
 

@@ -47,12 +47,15 @@ class FilmsAdapter(
         ) {
 
             val image = itemView.findViewById<ImageView>(R.id.imageView)
+            val nameFilm = itemView.findViewById<TextView>(R.id.textView)
             val buttonDet = itemView.findViewById<Button>(R.id.buttonDes)
             val buttonSetFavorite = itemView.findViewById<ImageView>(R.id.favoriteFilms)
 
             val favoriteImageResId = getFavoriteImageResId(film.isFavorite)
 
             image.setImageResource(film.imageResId)
+
+            nameFilm.setText(film.title)
 
             buttonDet.apply {
                 text = film.title
