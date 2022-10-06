@@ -3,47 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Program Files (x86)/AndroidStudioProject/FilmTest/app/src/main/res/drawable/bottom_selector.xml" value="0.148" />
-        <entry key="..\:/Program Files (x86)/AndroidStudioProject/FilmTest/app/src/main/res/drawable/item_divider.xml" value="0.2465" />
-        <entry key="..\:/Program Files (x86)/AndroidStudioProject/FilmTest/app/src/main/res/layout-land/each_item.xml" value="0.22" />
-        <entry key="..\:/Program Files (x86)/AndroidStudioProject/FilmTest/app/src/main/res/layout/activity_detailed.xml" value="0.36666666666666664" />
-        <entry key="..\:/Program Files (x86)/AndroidStudioProject/FilmTest/app/src/main/res/layout/activity_favorite.xml" value="0.36666666666666664" />
-        <entry key="..\:/Program Files (x86)/AndroidStudioProject/FilmTest/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
-        <entry key="..\:/Program Files (x86)/AndroidStudioProject/FilmTest/app/src/main/res/layout/card_movie.xml" value="0.36666666666666664" />
-        <entry key="..\:/Program Files (x86)/AndroidStudioProject/FilmTest/app/src/main/res/layout/each_item.xml" value="0.33" />
-        <entry key="..\:/Program Files (x86)/AndroidStudioProject/FilmTest/app/src/main/res/layout/favorite_activity.xml" value="0.36666666666666664" />
-        <entry key="..\:/Program Files (x86)/AndroidStudioProject/FilmTest/app/src/main/res/layout/fragment_detailed.xml" value="0.35260416666666666" />
-        <entry key="..\:/Program Files (x86)/AndroidStudioProject/FilmTest/app/src/main/res/layout/fragment_details.xml" value="0.36666666666666664" />
-        <entry key="..\:/Program Files (x86)/AndroidStudioProject/FilmTest/app/src/main/res/layout/fragment_favorite.xml" value="0.36666666666666664" />
-        <entry key="..\:/Program Files (x86)/AndroidStudioProject/FilmTest/app/src/main/res/layout/fragment_favorite2.xml" value="0.35260416666666666" />
-        <entry key="..\:/Program Files (x86)/AndroidStudioProject/FilmTest/app/src/main/res/layout/fragment_home.xml" value="0.35260416666666666" />
-        <entry key="..\:/Program Files (x86)/AndroidStudioProject/FilmTest/app/src/main/res/layout/fragment_main.xml" value="0.25" />
-        <entry key="..\:/Program Files (x86)/AndroidStudioProject/FilmTest/app/src/main/res/menu/bottom_menu.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/alena/AndroidStudioProjects/FilmTest/app/src/main/res/drawable/bottom_selector.xml" value="0.2515" />
-        <entry key="..\:/Users/alena/AndroidStudioProjects/FilmTest/app/src/main/res/drawable/ic_favorite.xml" value="0.2515" />
-        <entry key="..\:/Users/alena/AndroidStudioProjects/FilmTest/app/src/main/res/drawable/ic_favorite_fool_roz.xml" value="0.2175" />
-        <entry key="..\:/Users/alena/AndroidStudioProjects/FilmTest/app/src/main/res/drawable/ic_favorite_roz.xml" value="0.2515" />
-        <entry key="..\:/Users/alena/AndroidStudioProjects/FilmTest/app/src/main/res/drawable/ic_rose_favorite_24.xml" value="0.2515" />
-        <entry key="..\:/Users/alena/AndroidStudioProjects/FilmTest/app/src/main/res/drawable/item_divider.xml" value="0.2355" />
-        <entry key="..\:/Users/alena/AndroidStudioProjects/FilmTest/app/src/main/res/drawable/selector_favorite.xml" value="0.2175" />
+        <entry key="..\:/FilmTest/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/FilmTest/app/src/main/res/layout/fragment_main.xml" value="0.14722222222222223" />
         <entry key="..\:/Users/alena/AndroidStudioProjects/FilmTest/app/src/main/res/layout-land/activity_detailed.xml" value="0.25" />
-        <entry key="..\:/Users/alena/AndroidStudioProjects/FilmTest/app/src/main/res/layout-land/each_item.xml" value="0.22" />
-        <entry key="..\:/Users/alena/AndroidStudioProjects/FilmTest/app/src/main/res/layout/activity_detailed.xml" value="0.33" />
-        <entry key="..\:/Users/alena/AndroidStudioProjects/FilmTest/app/src/main/res/layout/activity_favorite_listfragment.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/alena/AndroidStudioProjects/FilmTest/app/src/main/res/layout-land/each_item.xml" value="0.5" />
+        <entry key="..\:/Users/alena/AndroidStudioProjects/FilmTest/app/src/main/res/layout/activity_detailed.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/alena/AndroidStudioProjects/FilmTest/app/src/main/res/layout/activity_films.xml" value="0.365625" />
         <entry key="..\:/Users/alena/AndroidStudioProjects/FilmTest/app/src/main/res/layout/activity_main.xml" value="0.35260416666666666" />
         <entry key="..\:/Users/alena/AndroidStudioProjects/FilmTest/app/src/main/res/layout/activity_main_films.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/alena/AndroidStudioProjects/FilmTest/app/src/main/res/layout/card_films.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/alena/AndroidStudioProjects/FilmTest/app/src/main/res/layout/card_movie.xml" value="0.25" />
         <entry key="..\:/Users/alena/AndroidStudioProjects/FilmTest/app/src/main/res/layout/each_item.xml" value="0.33" />
-        <entry key="..\:/Users/alena/AndroidStudioProjects/FilmTest/app/src/main/res/layout/favorite_activity.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/alena/AndroidStudioProjects/FilmTest/app/src/main/res/layout/favorite_empty.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/alena/AndroidStudioProjects/FilmTest/app/src/main/res/layout/favorite_list.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/alena/AndroidStudioProjects/FilmTest/app/src/main/res/layout/favorite_list_fragment.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/alena/AndroidStudioProjects/FilmTest/app/src/main/res/layout/favorite_movie_list.xml" value="0.365625" />
-        <entry key="..\:/Users/alena/AndroidStudioProjects/FilmTest/app/src/main/res/layout/fragment_favorite.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/alena/AndroidStudioProjects/FilmTest/app/src/main/res/layout/item.xml" value="0.365625" />
-        <entry key="..\:/Users/alena/AndroidStudioProjects/FilmTest/app/src/main/res/menu/bottom_menu.xml" value="0.1935185185185185" />
       </map>
     </option>
   </component>

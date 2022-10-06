@@ -4,13 +4,13 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.filmtest.data.retrofit.RetrofitRepo
-import com.example.filmtest.model.MovieModel
+import com.example.filmtest.model.FilmsModel
 import kotlinx.coroutines.launch
 import retrofit2.Response
 
 class MainFragmentViewModel: ViewModel() {
     val repo = RetrofitRepo()
-    val myMovies: MutableLiveData<Response<MovieModel>> = MutableLiveData()
+    val myMovies: MutableLiveData<Response<FilmsModel>> = MutableLiveData()
 
     fun getMovies(){
         viewModelScope.launch {

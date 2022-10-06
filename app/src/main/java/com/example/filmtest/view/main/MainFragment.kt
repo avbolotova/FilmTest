@@ -37,7 +37,7 @@ class MainFragment : Fragment() {
         recyclerView.adapter = adapter
         viewModel.getMovies()
         viewModel.myMovies.observe(viewLifecycleOwner, {
-            adapter.setList(it.body()!!.results)
+            adapter.setList(it.body()!!.items)
         })
     }
 
