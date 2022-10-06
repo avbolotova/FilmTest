@@ -10,8 +10,8 @@ import com.example.filmtest.databinding.FragmentDetailedBinding
 
 class DetailedFragment : Fragment() {
 
-    private var mBinding: FragmentDetailedBinding?= null
-    private val binding get() = mBinding!!
+    private lateinit var mBinding: FragmentDetailedBinding
+    private val binding get() = mBinding
 
 
     override fun onCreateView(

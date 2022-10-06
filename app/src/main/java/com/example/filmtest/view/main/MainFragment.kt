@@ -11,8 +11,8 @@ import com.example.filmtest.databinding.FragmentMainBinding
 
 class MainFragment : Fragment() {
 
-    private var mBinding: FragmentMainBinding ?= null
-    private val binding get() = mBinding!!
+    private lateinit var mBinding: FragmentMainBinding
+    private val binding get() = mBinding
     lateinit var recyclerView: RecyclerView
     private val adapter by lazy { MainAdapter() }
 
@@ -32,18 +32,12 @@ class MainFragment : Fragment() {
 
     private fun init() {
         val viewModel = ViewModelProvider(this).get(MainFragmentViewModel::class.java)
-//        viewModel.getMovies()
         recyclerView = binding.recyclerView
         recyclerView.adapter = adapter
         viewModel.getMovies()
         viewModel.myMovies.observe(viewLifecycleOwner, {
             adapter.setList(it.body()!!.items)
         })
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        mBinding = null
     }
 
 }

@@ -16,8 +16,8 @@ import com.google.android.material.snackbar.Snackbar
 
 class FavoriteFragment : Fragment() {
 
-    private var mBinding: FragmentFavoriteBinding?= null
-    private val binding get() = mBinding!!
+    private lateinit var mBinding: FragmentFavoriteBinding
+    private val binding get() = mBinding
     lateinit var recyclerView: RecyclerView
     private val adapter by lazy { MainAdapter() }
 
@@ -39,11 +39,6 @@ class FavoriteFragment : Fragment() {
         val viewModel = ViewModelProvider(this).get(FavoriteFragmentViewModel::class.java)
         recyclerView = binding.recyclerViewFav
         recyclerView.adapter = adapter
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        mBinding = null
     }
 
 }

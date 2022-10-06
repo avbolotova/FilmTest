@@ -21,11 +21,6 @@ class MainActivity : AppCompatActivity() {
         bottomNavigationView = findViewById(R.id.bottomMenu)
 
     }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        mBinding = null
-    }
 }
 
 //

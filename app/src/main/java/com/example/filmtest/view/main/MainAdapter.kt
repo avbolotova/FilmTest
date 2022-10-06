@@ -7,12 +7,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.filmtest.MAIN
 import com.example.filmtest.R
-import com.example.filmtest.model.ItemX
+import com.example.filmtest.model.Item
 import kotlinx.android.synthetic.main.fragment_detailed.view.*
 
 class MainAdapter: RecyclerView.Adapter<MainAdapter.MyViewHolder>() {
 
-    private var listMovies = emptyList<ItemX>()
+    private var listMovies = emptyList<Item>()
 
     class MyViewHolder(view: View): RecyclerView.ViewHolder(view)
 
@@ -34,7 +34,7 @@ class MainAdapter: RecyclerView.Adapter<MainAdapter.MyViewHolder>() {
     override fun getItemCount(): Int {
         return listMovies.size
     }
-    fun setList(list: List<ItemX>){
+    fun setList(list: List<Item>){
         listMovies = list
         notifyDataSetChanged()
 
