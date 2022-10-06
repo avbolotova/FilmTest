@@ -27,7 +27,6 @@ class FavoriteFragment : Fragment() {
         savedInstanceState: Bundle?,
     ): View {
         mBinding = FragmentFavoriteBinding.inflate(layoutInflater, container, false)
-        // Inflate the layout for this fragment
         return binding.root
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

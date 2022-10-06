@@ -36,7 +36,7 @@ class MainAdapter: RecyclerView.Adapter<MainAdapter.MyViewHolder>() {
     }
     fun setList(list: List<Item>){
         listMovies = list
-        notifyDataSetChanged()
+        notifyItemChanged(1)
 
     }
 }
