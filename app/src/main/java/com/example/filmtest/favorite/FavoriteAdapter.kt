@@ -32,7 +32,7 @@ class FavoriteAdapter(private var films: List<Films>) :
 
     fun refreshFilms(films: List<Films>) {
         this.films = films
-        notifyDataSetChanged()
+        notifyItemChanged(1)
     }
 
     fun getItem(position: Int) : Films = films[position]
