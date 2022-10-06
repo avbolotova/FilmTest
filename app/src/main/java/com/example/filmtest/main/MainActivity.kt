@@ -3,7 +3,6 @@ package com.example.filmtest.main
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Gravity
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.widget.AppCompatButton
@@ -12,7 +11,7 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
 import com.example.filmtest.R
 import com.example.filmtest.databinding.ActivityMainBinding
-import com.example.filmtest.fragments.Favorite_fragment
+import com.example.filmtest.fragments.FavoriteFragment
 import com.example.filmtest.observable.FilmsObserver
 import com.example.filmtest.repo.FilmsRepo
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -36,7 +35,7 @@ class MainActivity : AppCompatActivity(), FilmsObserver {
             when (it.itemId) {
                 R.id.home -> onOpenActivity()
                 R.id.favorite -> supportFragmentManager.beginTransaction()
-                    .replace(R.id.fragmentContainerView, Favorite_fragment())
+                    .replace(R.id.fragmentContainerView, FavoriteFragment())
                     .commit()
                 else -> {
                 }

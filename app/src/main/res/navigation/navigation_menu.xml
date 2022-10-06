@@ -11,7 +11,7 @@
         tools:layout="@layout/fragment_main" />
     <fragment
         android:id="@+id/favorite3"
-        android:name="com.example.filmtest.fragments.Favorite_fragment"
+        android:name="com.example.filmtest.fragments.FavoriteFragment"
         android:label="Favorite" >
         <action
             android:id="@+id/action_favorite3_to_mainActivity"

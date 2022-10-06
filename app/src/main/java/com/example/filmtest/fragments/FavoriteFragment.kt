@@ -19,7 +19,7 @@ import com.google.android.material.snackbar.Snackbar
 import org.xmlpull.v1.XmlPullParserFactory.newInstance
 
 
-class Favorite_fragment : Fragment(){
+class FavoriteFragment : Fragment(){
 
     private lateinit var adapter: FavoriteAdapter
 

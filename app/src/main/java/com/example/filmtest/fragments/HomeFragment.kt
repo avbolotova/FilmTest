@@ -12,17 +12,16 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
 import com.example.filmtest.R
-import com.example.filmtest.databinding.ActivityMainBinding
 import com.example.filmtest.main.DetailedActivity
 import com.example.filmtest.main.Films
 import com.example.filmtest.main.FilmsAdapter
 import com.example.filmtest.repo.FilmsRepo
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class Home_fragment : Fragment() {
+class HomeFragment : Fragment() {
 
     private lateinit var adapter: FilmsAdapter
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding:
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
