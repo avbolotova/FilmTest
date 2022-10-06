@@ -2,19 +2,4 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/navigation_menu"
-    app:startDestination="@id/mainActivity">
-    <activity
-        android:id="@+id/mainActivity"
-        android:name="com.example.filmtest.main.MainActivity"
-        android:label="fragment_main"
-        tools:layout="@layout/fragment_main" />
-    <fragment
-        android:id="@+id/favorite3"
-        android:name="com.example.filmtest.fragments.Favorite_fragment"
-        android:label="Favorite" >
-        <action
-            android:id="@+id/action_favorite3_to_mainActivity"
-            app:destination="@id/mainActivity" />
-    </fragment>
-</navigation>
+    android:id="@+id/navigation_menu" />
