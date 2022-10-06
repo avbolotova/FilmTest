@@ -21,7 +21,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 class HomeFragment : Fragment() {
 
     private lateinit var adapter: FilmsAdapter
-    private lateinit var binding:
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
