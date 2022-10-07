@@ -3,6 +3,7 @@ package com.example.filmtest.view.main
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.filmtest.MAIN
@@ -22,13 +23,14 @@ class MainAdapter: RecyclerView.Adapter<MainAdapter.MyViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.itemView.dtv_title_detailed.text = listMovies[position].title
+        holder.itemView.findViewById<TextView>(R.id.textView).text = listMovies[position].fullTitle
+        holder.itemView.findViewById<TextView>(R.id.rtText).text = listMovies[position].imDbRating
 
         Glide.with(MAIN)
             .load(listMovies[position].image)
             .centerCrop()
             .placeholder(R.drawable.item_divider)
-            .into(holder.itemView.img_detailed)
+            .into(holder.itemView.findViewById(R.id.imageView))
     }
 
     override fun getItemCount(): Int {
