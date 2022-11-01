@@ -1,4 +1,4 @@
-package com.example.filmtest.view.main
+package com.example.filmtest.view.favorite
 
 import android.view.LayoutInflater
 import android.view.View
@@ -9,20 +9,21 @@ import com.bumptech.glide.Glide
 import com.example.filmtest.MAIN
 import com.example.filmtest.R
 import com.example.filmtest.model.Item
-import kotlinx.android.synthetic.main.fragment_detailed.view.*
+import com.example.filmtest.view.main.MainAdapter
+import com.example.filmtest.view.main.MainFragment
 
-class MainAdapter: RecyclerView.Adapter<MainAdapter.MyViewHolder>() {
+class FavoriteAdapter : RecyclerView.Adapter<FavoriteAdapter.FavoriteViewHolder>() {
 
     private var listMovies = emptyList<Item>()
 
-    class MyViewHolder(view: View): RecyclerView.ViewHolder(view)
+    class FavoriteViewHolder(view: View): RecyclerView.ViewHolder(view)
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FavoriteViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.each_item, parent, false)
-        return MyViewHolder(view)
+        return FavoriteViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: FavoriteViewHolder, position: Int) {
         holder.itemView.findViewById<TextView>(R.id.textView).text = listMovies[position].title
         holder.itemView.findViewById<TextView>(R.id.rtText).text = listMovies[position].imDbRating
         holder.itemView.findViewById<TextView>(R.id.yearText).text = listMovies[position].year
@@ -42,11 +43,13 @@ class MainAdapter: RecyclerView.Adapter<MainAdapter.MyViewHolder>() {
 
     }
 
+    fun getItem(position: Int) : Item = listMovies[position]
 
-    override fun onViewAttachedToWindow(holder: MyViewHolder) {
+    override fun onViewAttachedToWindow(holder: FavoriteViewHolder) {
         super.onViewAttachedToWindow(holder)
         holder.itemView.setOnClickListener {
-            MainFragment.clickFilms(listMovies[holder.adapterPosition])
+            FavoriteFragment.clickFilmsFavorite(listMovies[holder.adapterPosition])
         }
     }
+
 }

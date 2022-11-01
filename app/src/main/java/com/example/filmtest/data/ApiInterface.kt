@@ -1,13 +1,13 @@
 package com.example.filmtest.data
 
-import com.example.filmtest.model.MoviesModel
+import com.example.filmtest.model.MovieModel
 import retrofit2.Response
 import retrofit2.http.GET
 
 
 interface ApiInterface {
     @GET("en/API/MostPopularMovies/k_tmpzsh96")
-    suspend fun getPopularMovies():Response<MoviesModel>
+    suspend fun getPopularMovies():Response<MovieModel>
 
 }
 
