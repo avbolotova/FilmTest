@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
 import com.example.filmtest.MAIN
+import com.example.filmtest.NetworkConnection
 import com.example.filmtest.R
 import com.example.filmtest.databinding.ActivityMainBinding
 import com.example.filmtest.databinding.FragmentFavoriteBinding

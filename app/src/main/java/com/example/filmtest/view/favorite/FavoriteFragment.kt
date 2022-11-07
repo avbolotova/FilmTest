@@ -25,7 +25,8 @@ class FavoriteFragment : Fragment() {
     private lateinit var mBinding: FragmentFavoriteBinding
     private val binding get() = mBinding
     lateinit var recyclerView: RecyclerView
-    private val adapter by lazy { MainAdapter() }
+    private val adapter by lazy { FavoriteAdapter() }
+
 
 
     override fun onCreateView(
@@ -58,11 +59,10 @@ class FavoriteFragment : Fragment() {
                 ): Boolean = false
 
                 override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
-//                    val movieFav = adapter.itemCount(viewHolder.adapterPosition)
-//                    MoviesRepo.deleteMovie()
+                    val item = adapter.getItem(viewHolder.adapterPosition)
+                    viewModel.deleteMovieFav(item as Item)
+                    adapter.notifyItemRemoved(viewHolder.adapterPosition)
 
-//                    val film = adapter.itemCount(viewHolder.adapterPosition)
-//                    MoviesRepo.deleteMovie()
                 }
             }
         )
@@ -76,5 +76,6 @@ class FavoriteFragment : Fragment() {
             MAIN.navController.navigate(R.id.action_detailedFragment_to_favoriteFragment, bundle)
         }
     }
+
 
 }
