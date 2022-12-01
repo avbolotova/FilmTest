@@ -24,6 +24,7 @@ class DetailedFragment : Fragment() {
     private var isFavorite = false
 
 
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
@@ -31,6 +32,8 @@ class DetailedFragment : Fragment() {
         mBinding = FragmentDetailedBinding.inflate(layoutInflater, container, false)
         currentMovie = arguments?.getSerializable("getFilms") as Item
         return binding.root
+
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -47,7 +50,6 @@ class DetailedFragment : Fragment() {
 
         }
     }
-
 
     private fun init() {
         val viewModel = ViewModelProvider(this).get(DetailedViewModel::class.java)
@@ -73,4 +75,6 @@ class DetailedFragment : Fragment() {
             }
         }
     }
+
+
 }

@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
         MAIN = this
 
         navController = Navigation.findNavController(this, R.id.fragmentContainerView)
-        NavigationUI.setupActionBarWithNavController(this, navController)
+
 
         bottomNavigationView = findViewById(R.id.bottomMenu)
 
