@@ -22,6 +22,7 @@ class DetailedFragment : Fragment() {
     private val binding get() = mBinding!!
     lateinit var currentMovie: Item
     private var isFavorite = false
+    private var isScheduleAdd = false
 
 
 
@@ -39,6 +40,7 @@ class DetailedFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         init()
+        initSheduleAdd()
 
 
         var button: Button = view.findViewById(R.id.toShareBut)
@@ -50,6 +52,32 @@ class DetailedFragment : Fragment() {
 
         }
     }
+
+    private fun initSheduleAdd() {
+        val viewModel = ViewModelProvider(this).get(DetailedViewModel::class.java)
+        Glide.with(MAIN)
+            .load(currentMovie.image)
+            .centerCrop()
+            .placeholder(R.drawable.item_divider)
+            .into(binding.imgDetailed)
+        binding.dtvTitleDetailed.text = currentMovie.fullTitle
+        binding.tvDescriptionDetailed.text = currentMovie.crew
+
+        binding.movieShed.setOnClickListener {
+            isScheduleAdd = if(!isScheduleAdd) {
+                binding.movieShed.setImageResource(R.drawable.ic_time_24)
+                viewModel.insert(currentMovie){
+                }
+                true
+            } else {
+                binding.movieShed.setImageResource(R.drawable.ic_pin_24)
+                viewModel.delete(currentMovie){
+                }
+                false
+            }
+        }
+    }
+
 
     private fun init() {
         val viewModel = ViewModelProvider(this).get(DetailedViewModel::class.java)

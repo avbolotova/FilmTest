@@ -15,6 +15,9 @@
         <action
             android:id="@+id/action_detailedFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_detailedFragment_to_scheduleFragment"
+            app:destination="@id/scheduleFragment" />
     </fragment>
     <fragment
         android:id="@+id/favoriteFragment"
@@ -24,6 +27,12 @@
         <action
             android:id="@+id/action_favoriteFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_favoriteFragment_to_detailedFragment"
+            app:destination="@id/detailedFragment" />
+        <action
+            android:id="@+id/action_favoriteFragment_to_scheduleFragment"
+            app:destination="@id/scheduleFragment" />
     </fragment>
     <fragment
         android:id="@+id/mainFragment"
@@ -34,6 +43,24 @@
             app:destination="@id/detailedFragment" />
         <action
             android:id="@+id/action_mainFragment_to_favoriteFragment"
+            app:destination="@id/favoriteFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_scheduleFragment"
+            app:destination="@id/scheduleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/scheduleFragment"
+        android:name="com.example.filmtest.view.shedule.ScheduleFragment"
+        android:label="fragment_schedule"
+        tools:layout="@layout/fragment_schedule" >
+        <action
+            android:id="@+id/action_scheduleFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_scheduleFragment_to_detailedFragment"
+            app:destination="@id/detailedFragment" />
+        <action
+            android:id="@+id/action_scheduleFragment_to_favoriteFragment"
             app:destination="@id/favoriteFragment" />
     </fragment>
 </navigation>

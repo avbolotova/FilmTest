@@ -16,5 +16,11 @@
         android:icon="@drawable/ic_favorite"
         />
 
+    <item
+        android:id="@+id/schedule"
+        android:title="Schedule"
+        android:icon="@drawable/ic_white_time_24"
+        />
+
 
 </menu>

@@ -23,6 +23,7 @@ import com.example.filmtest.view.favorite.FavoriteFragment
 import com.example.filmtest.view.main.MainAdapter
 import com.example.filmtest.view.main.MainFragment
 import com.example.filmtest.view.main.MainFragmentViewModel
+import com.example.filmtest.view.shedule.ScheduleFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.each_item.*
@@ -56,6 +57,10 @@ class MainActivity : AppCompatActivity() {
                 R.id.favorite -> supportFragmentManager.beginTransaction()
                     .replace(R.id.fragmentContainerView, FavoriteFragment())
                     .commit()
+                R.id.schedule -> supportFragmentManager.beginTransaction()
+                    .replace(R.id.fragmentContainerView, ScheduleFragment())
+                    .commit()
+
                 else -> {
                 }
             }
