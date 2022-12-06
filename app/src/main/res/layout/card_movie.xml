@@ -1,46 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tool="http://schemas.android.com/tools"
-    android:id="@+id/card_movie"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="100dp"
-    android:layout_margin="5dp"
-    app:cardCornerRadius="1dp"
-    app:cardElevation="2dp">
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="8dp"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="16dp"
+    app:cardElevation="2dp"
+    tools:ignore="MissingConstraints">
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
-
+        android:layout_height="wrap_content" >
 
         <ImageView
             android:id="@+id/FavActImage"
             android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
+            android:layout_height="150dp"
             android:src="@drawable/interstellar"
-            tool:ignore="MissingConstraints"
-            tool:layout_editor_absoluteX="-13dp"
-            tool:layout_editor_absoluteY="0dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBaseline_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:scaleType="fitXY" />
 
         <TextView
             android:id="@+id/FavName"
-            android:layout_width="211dp"
-            android:layout_height="34dp"
-            android:text="Название фильма"
-            android:textSize="15sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Интерстеллар"
+            android:textColor="@color/black"
+            android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.596"
+            app:layout_constraintHorizontal_bias="0.403"
             app:layout_constraintStart_toEndOf="@+id/FavActImage"
             app:layout_constraintTop_toTopOf="parent">
 
         </TextView>
 
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-</com.google.android.material.card.MaterialCardView>
+</androidx.cardview.widget.CardView>

@@ -16,4 +16,7 @@ class FavoriteFragmentViewModel: ViewModel() {
     fun deleteMovieFav(item: Item){
         viewModelScope.launch { REALIZATION.deleteMovie(item) {} }
     }
+
+
+
 }

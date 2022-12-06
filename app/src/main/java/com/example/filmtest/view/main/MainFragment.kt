@@ -31,6 +31,7 @@ class MainFragment : Fragment() {
         mBinding = FragmentMainBinding.inflate(layoutInflater, container, false)
         return binding.root
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         init()
@@ -46,11 +47,18 @@ class MainFragment : Fragment() {
             adapter.setList(it.body()!!.items)
         })
     }
+
     companion object {
         fun clickFilms(model: Item) {
             val bundle = Bundle()
             bundle.putSerializable("getFilms", model)
             MAIN.navController.navigate(R.id.action_mainFragment_to_detailedFragment, bundle)
+        }
+
+        fun addToSchedule(model: Item) {
+            val bundle = Bundle()
+            bundle.putSerializable("sheduleAdd", model)
+            MAIN.navController.navigate(R.id.action_mainFragment_to_scheduleFragment, bundle)
         }
     }
 }
